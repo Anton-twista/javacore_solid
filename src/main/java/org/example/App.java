@@ -1,5 +1,8 @@
 package org.example;
 
+import org.example.basket.Basket;
+import org.example.product.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -9,14 +12,12 @@ public class App {
 
         Basket basket = new Basket();
 
-        Product[] products = {new Product("Молоко", 68),
-                new Product("Хлеб", 35),
-                new Product("Масло", 149),
-                new Product("Гречка", 100),
-                new Product("Колбаса", 250),
-                new Product("Сыр", 174),
-                new Product("Мазик", 80),
-                new Product("Вода", 50),};
+        Product[] products = {new Water(),
+                new Cheese(),
+                new Bread(),
+                new Milk(),
+                new Sausage()
+        };
 
         while (true) {
             System.out.println("Выберите действие: \n" +
@@ -47,7 +48,7 @@ public class App {
                     break;
 
                 case 3:
-                    System.out.println("Вы выбрали 3. Добваить в корзину. \n" + "Выберите номер товара и количество \n" +
+                    System.out.println("Вы выбрали 3. Добваить в корзину. \n" + "Введите код товара и количество \n" +
                             "Введите 0, чтобы выйти и посмотреть что в корзине\n");
                     while (true) {
                         String choice = scanner.nextLine();
@@ -64,8 +65,8 @@ public class App {
 
                 case 4:
                     System.out.println("Вы выбрали 4. Удалить из корзины \n" +
-                            "Введите норме товара который нужно удалить: \n" +
-                            "0 чтобы выйти");
+                            "Введите код товара который нужно удалить: \n" +
+                            "0 чтобы выйти \n");
                     basket.print();
                     while (true) {
                         String choice = scanner.nextLine();
@@ -94,7 +95,7 @@ public class App {
         System.out.println("Список возможных товаров для покупки");
         // Magic - вместо числа используем products.length
         for (int i = 0; i < products.length; i++) {
-            System.out.println(i + 1 + ". " + products[i]);
+            System.out.println(products[i].setCode(i + 1) + ". " + products[i]);
         }
     }
 }

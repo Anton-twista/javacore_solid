@@ -1,4 +1,6 @@
-package org.example;
+package org.example.basket;
+
+import org.example.product.Product;
 
 public interface IBasket {
 

@@ -1,14 +1,18 @@
-package org.example;
+package org.example.product;
 
-public class Product {
+public abstract class Product {
 
     private String name;
     private int count;
     private int price;
+    private int code;
 
-    public Product(String name, int price) {
-        this.name = name;
-        this.price = price;
+    public int getCode() {
+        return code;
+    }
+
+    public int setCode(int code) {
+        return this.code = code;
     }
 
     public String getName() {
@@ -41,6 +45,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Наименовение товара: " + name + " - " + price + " руб.";
+        return name;
     }
 }
