@@ -2,11 +2,11 @@
 ## Примеры принципов, использованных в коде:
 
 ### Magics:
-Информация о продуктах вынесена в константы своих классов,
+Информация о продуктах вынесена в [константы](https://github.com/Anton-twista/javacore_solid/blob/main/src/main/java/org/example/product/Sausage.java) своих классов,
 и не используются в основном коде напрямую.
 
 ### DRY:
-Повторяющийся код вынесен в отдельные методы (printProducts(), basket.print()),
+Повторяющийся код вынесен в отдельные методы ([printProducts()](https://github.com/Anton-twista/javacore_solid/blob/a8262ee883cc28a624107056725f8a68716a24b8/src/main/java/org/example/App.java#L93)), [basket.print())](https://github.com/Anton-twista/javacore_solid/blob/a8262ee883cc28a624107056725f8a68716a24b8/src/main/java/org/example/basket/Basket.java#L39),
 и вызывается по необходимости не засоряя основной код.
 
 ### SOLID:
